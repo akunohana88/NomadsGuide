@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style media="screen">
+    nav{
+      background-image: url("logo.png");
+      background-size: 150px;
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+    }
+      .container {
+          position: absolute;
+          padding-left: 20px;
+          padding-top: 20px;
+      }
+
+      #restaurant {
+          left: 100px;
+          top: 100px;
+      }
+
+      .image_right {
+          right: 300px;
+          top: 20px;
+          height: 50%;
+          width: 50%;
+      }
+
+      .paragraph {
+          width: 500px;
+      }
+
+      .image_left {
+          left: 25px;
+          top: 20px;
+          height: 50%;
+          width: 50%;
+      }
+
+      #living_space {
+          left: 15px;
+          top: 500px;
+      }
+      /* .text{
+      position: absolute;
+      left: 300px;
+    } */
+
+      #landmark {
+          left: 100px;
+          top: 900px;
+      }
+
+      #aquarium {
+          left: 15px;
+          top: 1300px;
+      }
+
+      #museum {
+          left: 100px;
+          top: 1700px;
+      }
+
+      .state_name {
+          padding-top: 20px;
+          padding-right: 60px;
+          text-align: right;
+          text-decoration: underline;
+          top: 50px;
+          font-size: 48px;
+      }
+
+      .page {
+          position: relative;
+          top: -50px;
+      }
+
+      .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          padding-top: 60px;
+          transition: 0.5s;
+      }
+
+      .sidenav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+      }
+
+      .sidenav a:hover {
+          color: #f1f1f1;
+      }
+
+      .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+      }
+
+      #main {
+          transition: margin-left .5s;
+          padding: 20px;
+      }
+
+      @media screen and (max-height: 450px) {
+          .sidenav {
+              padding-top: 15px;
+          }
+          .sidenav a {
+              font-size: 18px;
+          }
+      }
+
+      #locations {
+          background-color: #255;
+          border-color: #255;
+      }
+
+      .writing_left {
+          text-align: left;
+          float: left;
+      }
+
+      .writing_right {
+          text-align: right;
+          float: right;
+      }
+
+      .picture_right {
+          text-align: right;
+          float: left;
+      }
+
+      .picture_left {
+          text-align: left;
+          float: right;
+      }
+
+      .images {
+          width: 1025px;
+          height: 600px;
+      }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Nomad's Guide</a>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="alaska.html">Alaska</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="arizona.html">Arizona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="new_mexico.html">New Mexico</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="virginia.html">Virginia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="washington.html">Washington</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="more_states_page.html">More States...</a>
+            </li>
+          </ul>
+    </nav>
+    <!-- SIDENAV BAR -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" onclick="restaurant_scroll()">Restaurant</a>
+        <a href="javascript:void(0)" onclick="lq_scroll()">Living Quarters</a>
+        <a href="javascript:void(0)" onclick="landmark_scroll()">Landmark</a>
+        <a href="javascript:void(0)" onclick="aquarium_scroll()">Aquarium</a>
+        <a href="javascript:void(0)" onclick="museum_scroll()">Museum</a>
+    </div>
+    <div id="main">
+        <button type="button" onclick="openNav()" id="locations" class="btn btn-primary">Locations</button>
+    </div>
+
+    <!-- STATE PAGE -->
+    <h1 class="state_name">Kentucky</h1>
+    <div class="page">
+        <div class="container" id="restaurant">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Restaurant</h1>
+                    <h5>Kentucky Fudge Company</h5>
+                    <h6 class="paragraph">Location:  225 S Main St, Harrodsburg, KY 40330 </h6>
+                    <h6 class="paragraph">Contact Info:  (859) 733-0088 </h6>
+                    <h6 class="paragraph">Website: N/A</h6>
+                    <h6 class="paragraph">About:The restaurant has a great selection of sandwiches, soups and salads. Their comfort foods are made the old fashioned way and are great for quick bites.</h6>
+                </div>
+                <div class="images"><img src="kentucky_rest.jpg" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="living_space">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Living Quarters</h1>
+                    <h5>Best Western Richmond Hotel</h5>
+                    <h6 class="paragraph">Location:  100 Eastern Bypass, Richmond, KY 40475 </h6>
+                    <h6 class="paragraph">Contact Info:  (859) 623-9220 </h6>
+                    <h6 class="paragraph">Website: <a href=https://www.bestwestern.com/en_US/book/hotel-rooms.18082.html?iata=00171880&ssob=BLBWI0004G&cid=BLBWI0004G:google:gmb:18082>https://www.bestwestern.com/</a> </h6>
+                    <h6 class="paragraph">About: It's location is convenient and the staff are friendly. They offer free breakfast, which is served in as a buffet. In addition, they have free WiFi.</h6>
+                </div>
+                <div class="images"><img src="kentucky_hotel.png" class="image_left"></div>
+            </div>
+        </div>
+
+        <div class="container" id="landmark">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Landmark</h1>
+                    <h5> Mammoth Cave National Park </h5>
+                    <h6 class="paragraph">Location:  Mammoth Cave, KY 42259 </h6>
+                    <h6 class="paragraph">Contact Info:  (270) 758-2180 </h6>
+                    <h6 class="paragraph">Website: <a href= https://www.nps.gov/maca/index.htm>https://www.nps.gov/maca/index.htm</a></h6>
+                    <h6 class="paragraph">About: Mammoth Cave National Park is in the U.S. state of Kentucky. It's home to the Mammoth Cave, a long cave system of chambers and subterranean passageways. Sites include the Frozen Niagara section, known for waterfall-like flowstone formations.</h6>
+                </div>
+                <div class="images"><img src="kentucky_landmark.jpg" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="aquarium">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Aquarium</h1>
+                        <h5>Newport Aquarium</h5>
+                        <h6 class="paragraph">Location:  1, Levee Way, Newport, KY 41071 </h6>
+                        <h6 class="paragraph">Contact Info: (800) 406-3474 </h6>
+                        <h6 class="paragraph">Website: <a href=http://www.buckheadgrandspa.com>http://www.buckheadgrandspa.com</a></h6>
+                        <h6 class="paragraph">About: The Newport Aquarium is an aquarium located in Newport, Kentucky, United States at Newport on the Levee. The aquarium has 70 exhibits and 14 galleries, including five seamless acrylic tunnels totaling over 200 feet in length. </h6>
+                </div>
+                <div class="images"><img src="kentucky_aquarium.png" class="image_left"></div>
+            </div>
+        </div>
+
+        <div class="container" id="museum">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Museum</h1>
+                    <h5>Creation Museum</h5>
+                    <h6 class="paragraph">Location:  2800 Bullittsburg Church Rd, Petersburg, KY 41080 </h6>
+                    <h6 class="paragraph">Contact Info: (800) 721-2298 </h6>
+                    <h6 class="paragraph">Website: <a href= https://creationmuseum.org/>https://creationmuseum.org/</a></h6>
+                    <h6 class="paragraph">About: The Creation Museum, located in Petersburg, Kentucky, United States, is operated by the Christian creation apologetics organization Answers in Genesis (AiG). It promotes a pseudoscientific, young Earth creationist (YEC) explanation of the origin of the universe based on a literal interpretation of the Genesis creation narrative in the Bible. </h6>
+                </div>
+                <div class="images"><img src="kentucky_museum.png" class="image_right"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function restaurant_scroll() {
+            var elmnt = document.getElementById("restaurant");
+            elmnt.scrollIntoView();
+        }
+
+        function lq_scroll() {
+            var elmnt2 = document.getElementById("living_space");
+            elmnt2.scrollIntoView();
+        }
+
+        function landmark_scroll() {
+            var elmnt3 = document.getElementById("landmark");
+            elmnt3.scrollIntoView();
+        }
+
+        function aquarium_scroll() {
+            var elmnt4 = document.getElementById("aquarium");
+            elmnt4.scrollIntoView();
+        }
+
+        function museum_scroll() {
+            var elmnt5 = document.getElementById("museum");
+            elmnt5.scrollIntoView();
+        }
+    </script>
+</body>
+
+</html>
