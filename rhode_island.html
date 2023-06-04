@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style media="screen">
+      nav{
+        background-image: url("logo.png");
+        background-size: 150px;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+      }
+        .container {
+            position: absolute;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+
+        #restaurant {
+            left: 100px;
+            top: 100px;
+        }
+
+        .image_right {
+            right: 300px;
+            top: 20px;
+            height: 50%;
+            width: 50%;
+        }
+
+        .paragraph {
+            width: 500px;
+        }
+
+        .image_left {
+            left: 25px;
+            top: 20px;
+            height: 50%;
+            width: 50%;
+        }
+
+        #living_space {
+            left: 15px;
+            top: 500px;
+        }
+        /* .text{
+        position: absolute;
+        left: 300px;
+      } */
+
+        #landmark {
+            left: 100px;
+            top: 900px;
+        }
+
+        #spa {
+            left: 15px;
+            top: 1300px;
+        }
+
+        #museum {
+            left: 100px;
+            top: 1700px;
+        }
+
+        .state_name {
+            padding-top: 20px;
+            padding-right: 60px;
+            text-align: right;
+            text-decoration: underline;
+            top: 50px;
+            font-size: 48px;
+        }
+
+        .page {
+            position: relative;
+            top: -50px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        #locations {
+            background-color: #255;
+            border-color: #255;
+        }
+
+        .writing_left {
+            text-align: left;
+            float: left;
+        }
+
+        .writing_right {
+            text-align: right;
+            float: right;
+        }
+
+        .picture_right {
+            text-align: right;
+            float: left;
+        }
+
+        .picture_left {
+            text-align: left;
+            float: right;
+        }
+
+        .images {
+            width: 1025px;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Nomad's Guide</a>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="alaska.html">Alaska</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="arizona.html">Arizona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="new_mexico.html">New Mexico</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="virginia.html">Virginia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="washington.html">Washington</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="more_states_page.html">More States...</a>
+            </li>
+          </ul>
+    </nav>
+    <!-- SIDENAV BAR -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" onclick="restaurant_scroll()">Restaurant</a>
+        <a href="javascript:void(0)" onclick="lq_scroll()">Living Quarters</a>
+        <a href="javascript:void(0)" onclick="landmark_scroll()">Landmark</a>
+        <a href="javascript:void(0)" onclick="spa_scroll()">Spa</a>
+        <a href="javascript:void(0)" onclick="museum_scroll()">Museum</a>
+    </div>
+    <div id="main">
+        <button type="button" onclick="openNav()" id="locations" class="btn btn-primary">Locations</button>
+    </div>
+
+    <!-- STATE PAGE -->
+    <h1 class="state_name">Rhode Island</h1>
+    <div class="page">
+        <div class="container" id="restaurant">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Restaurant</h1>
+                    <h5>Los Andes Restaurant</h5>
+                    <h6 class="paragraph">Location: 903 Chalkstone Ave, Providence, RI 02908 </h6>
+                    <h6 class="paragraph">Contact Info: (401) 649-4911</h6>
+                    <h6 class="paragraph">Website: <a href="https://www.losandesri.com">https://www.losandesri.com </a></h6>
+                    <h6 class="paragraph">About: The Los Andes Restaurant is a casual place that serves tons of Latin American cuisine at affordable prices. The waitstaff is friendly, the food is great, and there’s even a full bar. There’s no reason not to stop by and grab a bite here while you’re in Rhode Island.
+</h6>
+                </div>
+                <div class="images"><img src="rhode_island_rest.jpg" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="living_space">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Living Quarters</h1>
+                    <h5>The Dean Hotel</h5>
+                    <h6 class="paragraph">Location: 122 Fountain St, Providence, RI 02903 </h6>
+                    <h6 class="paragraph">Contact Info: (401) 455-3326</h6>
+                    <h6 class="paragraph">Website: <a href= "https://www.thedeanhotel.com ">http://www.thedeanhotel.com </a> </h6>
+                    <h6 class="paragraph">About: This affordable hotel is a great place to rest your head while you’re staying in Rhode Island. The staff is extremely helpful, the decor is artsy/vintage, and there’s even a coffee shop, a karaoke bar, and a speakeasy-esque bar right within the hotel. It’s also dog-friendly, so your canine companions can accompany you on your stay!
+</h6>
+                </div>
+                <div class="images"><img src="rhode_island_hotel.jpg" class="image_left"></div>
+            </div>
+        </div>
+
+        <div class="container" id="landmark">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Landmark</h1>
+                    <h5>The Breakers</h5>
+                    <h6 class="paragraph">Location: 44 Ochre Point Ave, Newport, RI 02840-6906</h6>
+                    <h6 class="paragraph">Contact Info: (401) 847-1000</h6>
+                    <h6 class="paragraph">Website: <a href= "https://www.newportmansions.org    ">http://www.newportmansions.org  </a> </h6>
+                    <h6 class="paragraph">About: The Breakers is a mansion belonging to the wealthy Vanderbilt family, whose fortune was built upon steamships and the New York Central Railroad during the 19th century. The house, which has been designed in the Renaissance style, is now a National Historic Landmark, and it properly demonstrates the extreme wealth and social status held by the Vanderbilts during this time period. It’s a beautiful piece of history that you should definitely visit if you have the chance.
+</h6>
+                </div>
+                <div class="images"><img src="rhode_island_landmark.jpg" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="spa">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Spa</h1>
+                        <h5>Harmony on Hope Massage</h5>
+                        <h6 class="paragraph">Location: 335 Hope St, Providence, RI 02906 </h6>
+                        <h6 class="paragraph">Contact Info: (401) 270-88776</h6>
+                        <h6 class="paragraph">Website: <a href="https://www.harmonyonhopemassage.com " >https://www.harmonyonhopemassage.com </a></h6>
+                        <h6 class="paragraph">About: Harmony on Hope Massage is an affordable, relaxing place to get pampered while you’re in Rhode Island. The environment is extremely inviting, and the staff is extremely skilled at their jobs. It’s a  great place to go for both relaxation and the treatment of some of the physical ailments.
+</h6>
+                </div>
+                <div class="images"><img src="rhode_island_spa.png" class="image_left"></div>
+            </div>
+        </div>
+
+        <div class="container" id="museum">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Museum</h1>
+                    <h5>RISD Museum</h5>
+                    <h6 class="paragraph">Location: 224 Benefit St, Providence, RI 02903 </h6>
+                    <h6 class="paragraph">Contact Info: (401) 454-6500</h6>
+                    <h6 class="paragraph">Website: <a href= "http://www.risdmuseum.org  " > http://www.risdmuseum.org    </a></h6>
+                    <h6 class="paragraph">About: The Rhode Island School of Design Museum was established in 1877, and features a host of famous historical artists, like Picasso and Matisse, as well as some modern day artists. When you come here, you’ll have access to over 100,000 art pieces from all throughout history, which is why you should make it a point to stop by before you leave Rhode Island.
+</h6>
+                </div>
+                <div class="images"><img src="rhode_island_museum.jpg" class="image_right"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function restaurant_scroll() {
+            var elmnt = document.getElementById("restaurant");
+            elmnt.scrollIntoView();
+        }
+
+        function lq_scroll() {
+            var elmnt2 = document.getElementById("living_space");
+            elmnt2.scrollIntoView();
+        }
+
+        function landmark_scroll() {
+            var elmnt3 = document.getElementById("landmark");
+            elmnt3.scrollIntoView();
+        }
+
+        function spa_scroll() {
+            var elmnt4 = document.getElementById("spa");
+            elmnt4.scrollIntoView();
+        }
+
+        function museum_scroll() {
+            var elmnt5 = document.getElementById("museum");
+            elmnt5.scrollIntoView();
+        }
+    </script>
+</body>
+
+</html>

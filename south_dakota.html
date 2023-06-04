@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style media="screen">
+      nav{
+        background-image: url("logo.png");
+        background-size: 150px;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+      }
+        .container {
+            position: absolute;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+
+        #restaurant {
+            left: 100px;
+            top: 100px;
+        }
+
+        .image_right {
+            right: 300px;
+            top: 20px;
+            height: 50%;
+            width: 50%;
+        }
+
+        .paragraph {
+            width: 500px;
+        }
+
+        .image_left {
+            left: 25px;
+            top: 20px;
+            height: 50%;
+            width: 50%;
+        }
+
+        #living_space {
+            left: 15px;
+            top: 500px;
+        }
+        /* .text{
+        position: absolute;
+        left: 300px;
+      } */
+
+        #landmark {
+            left: 100px;
+            top: 900px;
+        }
+
+        #attraction {
+            left: 15px;
+            top: 1300px;
+        }
+
+        #museum {
+            left: 100px;
+            top: 1700px;
+        }
+
+        .state_name {
+            padding-top: 20px;
+            padding-right: 60px;
+            text-align: right;
+            text-decoration: underline;
+            top: 50px;
+            font-size: 48px;
+        }
+
+        .page {
+            position: relative;
+            top: -50px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        #locations {
+            background-color: #255;
+            border-color: #255;
+        }
+
+        .writing_left {
+            text-align: left;
+            float: left;
+        }
+
+        .writing_right {
+            text-align: right;
+            float: right;
+        }
+
+        .picture_right {
+            text-align: right;
+            float: left;
+        }
+
+        .picture_left {
+            text-align: left;
+            float: right;
+        }
+
+        .images {
+            width: 1025px;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Nomad's Guide</a>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="alaska.html">Alaska</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="arizona.html">Arizona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="new_mexico.html">New Mexico</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="virginia.html">Virginia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="washington.html">Washington</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="more_states_page.html">More States...</a>
+            </li>
+          </ul>
+    </nav>
+    <!-- SIDENAV BAR -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" onclick="restaurant_scroll()">Restaurant</a>
+        <a href="javascript:void(0)" onclick="lq_scroll()">Living Quarters</a>
+        <a href="javascript:void(0)" onclick="landmark_scroll()">Landmark</a>
+        <a href="javascript:void(0)" onclick="attraction_scroll()">Tourist Attraction</a>
+        <a href="javascript:void(0)" onclick="museum_scroll()">Museum</a>
+    </div>
+    <div id="main">
+        <button type="button" onclick="openNav()" id="locations" class="btn btn-primary">Locations</button>
+    </div>
+
+    <!-- STATE PAGE -->
+    <h1 class="state_name">South Dakota</h1>
+    <div class="page">
+        <div class="container" id="restaurant">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Restaurant</h1>
+                    <h5>Cattleman's Club Steakhouse</h5>
+                    <h6 class="paragraph">Location: 29608 SD-34, Pierre, SD 57501</h6>
+                    <h6 class="paragraph">Contact Info: (605) 224-9774</h6>
+                    <h6 class="paragraph">Website: <a href="http://www.cattlemansclubsteakhouse.com/">http://www.cattlemansclubsteakhouse.com/</a></h6>
+                    <h6 class="paragraph">About: The restaurant has a great selection of beer. Their steaks are cooked perfectly the way custoers want it. Along with the food, customers are able to enjoy the breathtaking view outside.</h6>
+                </div>
+                <div class="images"><img src="south_dakota_rest.png" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="living_space">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Living Quarters</h1>
+                    <h5>SpringHill Suites by Marriott Deadwood</h5>
+                    <h6 class="paragraph">Location: 322 Main St, Deadwood, SD 57732</h6>
+                    <h6 class="paragraph">Contact Info: (605) 559-1600</h6>
+                    <h6 class="paragraph">Website: <a href= "https://www.marriott.com/hotels/travel/rapdw-springhill-suites-deadwood/?scid=bb1a189a-fec3-4d19-a255-54ba596febe2">https://www.marriott.com/hotels/</a> </h6>
+                    <h6 class="paragraph">About: These relaxed suites include microwaves and minifridges. In addition, they include free hot breakfast and an indoor pool. Customers have all agreed that the hotel has a stylish vibe and is a great option for families.</h6>
+                </div>
+                <div class="images"><img src="south_dakota_hotel.png" class="image_left"></div>
+            </div>
+        </div>
+
+        <div class="container" id="landmark">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Landmark</h1>
+                    <h5>Mount Rushmore National Memorial</h5>
+                    <h6 class="paragraph">Location:  13000 SD-244, Keystone, SD 57751</h6>
+                    <h6 class="paragraph">Contact Info: (605) 574-2523</h6>
+                    <h6 class="paragraph">Website: <a href="https://www.nps.gov/moru/index.htm">https://www.nps.gov/</a></h6>
+                    <h6 class="paragraph">About: The Mount Rushmore National Memorial is a well known sculpture carved into Mount Rushmore. The site also features a museum with interactive exhibits.</h6>
+                </div>
+                <div class="images"><img src="south_dakota_landmark.png" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="attraction">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Tourist Attraction</h1>
+                        <h5>World's Only Corn Palace</h5>
+                        <h6 class="paragraph">Location: 604 N Main St, Mitchell, SD 57301</h6>
+                        <h6 class="paragraph">Contact Info: (605) 995-8426</h6>
+                        <h6 class="paragraph">Website: <a href=https://www.foggymountaingems.com/>https://www.foggymountaingems.com/</a></h6>
+                        <h6 class="paragraph">About: This destination serves as a multi-purpose arena and facility for the community around it. It has been a venue for concerts, sports events, exhibits and more.</h6>
+                </div>
+                <div class="images"><img src="south_dakota_attraction.png" class="image_left"></div>
+            </div>
+        </div>
+
+        <div class="container" id="museum">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Museum</h1>
+                    <h5>The Mammoth Site of Hot Springs</h5>
+                    <h6 class="paragraph">Location: 1800 US-18 BYP, Hot Springs, SD 57747</h6>
+                    <h6 class="paragraph">Contact Info: (605) 745-6017</h6>
+                    <h6 class="paragraph">Website: <a href= http://www.mammothsite.org/> http://www.mammothsite.org/</a></h6>
+                    <h6 class="paragraph">About: The Mammoth Site of Hots Springs is a museum featuring a paleontological site. This active paleontological excavation site still has ongoing research and excavations to this day.</h6>
+                </div>
+                <div class="images"><img src="south_dakota_museum.png" class="image_right"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function restaurant_scroll() {
+            var elmnt = document.getElementById("restaurant");
+            elmnt.scrollIntoView();
+        }
+
+        function lq_scroll() {
+            var elmnt2 = document.getElementById("living_space");
+            elmnt2.scrollIntoView();
+        }
+
+        function landmark_scroll() {
+            var elmnt3 = document.getElementById("landmark");
+            elmnt3.scrollIntoView();
+        }
+
+        function attraction_scroll() {
+            var elmnt4 = document.getElementById("attraction");
+            elmnt4.scrollIntoView();
+        }
+
+        function museum_scroll() {
+            var elmnt5 = document.getElementById("museum");
+            elmnt5.scrollIntoView();
+        }
+    </script>
+</body>
+
+</html>
