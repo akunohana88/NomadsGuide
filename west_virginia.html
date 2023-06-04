@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style media="screen">
+      nav{
+        background-image: url("logo.png");
+        background-size: 150px;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+      }
+        .container {
+            position: absolute;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+
+        #restaurant {
+            left: 100px;
+            top: 100px;
+        }
+
+        .image_right {
+            right: 300px;
+            top: 20px;
+            height: 50%;
+            width: 50%;
+        }
+
+        .paragraph {
+            width: 500px;
+        }
+
+        .image_left {
+            left: 25px;
+            top: 20px;
+            height: 50%;
+            width: 50%;
+        }
+
+        #living_space {
+            left: 15px;
+            top: 500px;
+        }
+        /* .text{
+        position: absolute;
+        left: 300px;
+      } */
+
+        #landmark {
+            left: 100px;
+            top: 900px;
+        }
+
+        #spa {
+            left: 15px;
+            top: 1300px;
+        }
+
+        #museum {
+            left: 100px;
+            top: 1700px;
+        }
+
+        .state_name {
+            padding-top: 20px;
+            padding-right: 60px;
+            text-align: right;
+            text-decoration: underline;
+            top: 50px;
+            font-size: 48px;
+        }
+
+        .page {
+            position: relative;
+            top: -50px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        #locations {
+            background-color: #255;
+            border-color: #255;
+        }
+
+        .writing_left {
+            text-align: left;
+            float: left;
+        }
+
+        .writing_right {
+            text-align: right;
+            float: right;
+        }
+
+        .picture_right {
+            text-align: right;
+            float: left;
+        }
+
+        .picture_left {
+            text-align: left;
+            float: right;
+        }
+
+        .images {
+            width: 1025px;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Nomad's Guide</a>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="alaska.html">Alaska</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="arizona.html">Arizona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="new_mexico.html">New Mexico</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="virginia.html">Virginia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="washington.html">Washington</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="more_states_page.html">More States...</a>
+            </li>
+          </ul>
+    </nav>
+    <!-- SIDENAV BAR -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" onclick="restaurant_scroll()">Restaurant</a>
+        <a href="javascript:void(0)" onclick="lq_scroll()">Living Quarters</a>
+        <a href="javascript:void(0)" onclick="landmark_scroll()">Landmark</a>
+        <a href="javascript:void(0)" onclick="spa_scroll()">Spa</a>
+        <a href="javascript:void(0)" onclick="museum_scroll()">Museum</a>
+    </div>
+    <div id="main">
+        <button type="button" onclick="openNav()" id="locations" class="btn btn-primary">Locations</button>
+    </div>
+
+    <!-- STATE PAGE -->
+    <h1 class="state_name">West Virginia</h1>
+    <div class="page">
+        <div class="container" id="restaurant">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Restaurant</h1>
+                    <h5>Big Joe’s </h5>
+                    <h6 class="paragraph">Location: 10 Capitol St Charleston, WV 25301</h6>
+                    <h6 class="paragraph">Contact Info:  (304) 400-4643 </h6>
+                    <h6 class="paragraph">Website: <a href= http://bigjoescharlestonwv.com/> http://bigjoescharlestonwv.com/</a></h6>
+                    <h6 class="paragraph">About: This Bar, offers a great selection of everyones favorite foods! This includes, pizza, and burgers and so many more! They also have a wide selection of beverages!</h6>
+                </div>
+                <div class="images"><img src="west_virginia_rest.jpg" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="living_space">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Living Quarters</h1>
+                    <h5>The Greenbrier</h5>
+                    <h6 class="paragraph">Location: 101 Main Street West, White Sulphur Springs, WV 24986  </h6>
+                    <h6 class="paragraph">Contact Info: (855) 453-4858  </h6>
+                    <h6 class="paragraph">Website: <a href= http://www.greenbrier.com/ > http://www.greenbrier.com/ </a> </h6>
+                    <h6 class="paragraph">About: This resort has it all! It offers 710 rooms, including 33 suites and 96 guest and estate homes, it also has 10 lobbies, more than 40 meeting rooms and a complete conference center facility. It even has a great view by being surrounded by the Allegheny Mountains! The Greenbrier offers exclusive services and amenities such as championship golf, fine dining, more than 55 other activities, and a 103,000 square foot gaming and entertainment venue.</h6>
+                </div>
+                <div class="images"><img src="west_virginia_hotel.jpg" class="image_left"></div>
+            </div>
+        </div>
+
+        <div class="container" id="landmark">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Landmark</h1>
+                    <h5>Blackwater Falls State Park</h5>
+                    <h6 class="paragraph">Location: N/A </h6>
+                    <h6 class="paragraph">Contact Info: 1-833-WV-PARKS</h6>
+                    <h6 class="paragraph">Website: <a href=  https://wvstateparks.com/park/blackwater-falls-state-park/> https://wvstateparks.com/park/blackwater-falls-state-park/</a></h6>
+                    <h6 class="paragraph">About: This Park is located in the Allegheny Mountains of Tucker County, that in which surrounds Greenbrier. Blackwater Falls State Park is named for the amber waters of its famous Blackwater Falls, a 57-foot cascade  that in which is tinted by the tannic acid of fallen hemlock and it’s red spruce needles. The falls, is the main attraction of Blackwater Falls State Park, which is accessible from steps and several viewing platforms that allow visitors to enjoy scenic views year-round. </h6>
+                </div>
+                <div class="images"><img src="west_virginia_landmark.jpg" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="spa">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Spa</h1>
+                        <h5>The Greenbrier</h5>
+                        <h6 class="paragraph">Location: 101 Main Street West, White Sulphur Springs, WV 24986</h6>
+                        <h6 class="paragraph">Contact Info: (855) 453-4858 </h6>
+                        <h6 class="paragraph">Website: <a href=http://www.greenbrier.com/> http://www.greenbrier.com/</a></h6>
+                        <h6 class="paragraph">About:  This Spa was renowned and now a mineral spa with all sorts of different types of massages and treatments. This spa also includes saunas and steam rooms! As well as a meditation area for those who prefer it.</h6>
+                </div>
+                <div class="images"><img src="west_virginia_spa.jpg" class="image_left"></div>
+            </div>
+        </div>
+
+        <div class="container" id="museum">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Museum</h1>
+                    <h5>West Virginia State Museum </h5>
+                    <h6 class="paragraph">Location: 1900 Kanawha Blvd E #435, Charleston, WV 25305</h6>
+                    <h6 class="paragraph">Contact Info: (304) 558-0220 </h6>
+                    <h6 class="paragraph">Website: N/A </h6>
+                    <h6 class="paragraph">About: This museum is filled with more than 6,000 artifacts from the state’s history. It not only offers some visual entertainment but as well as other activities such as neo traditional music from songs all over the world.  </h6>
+                </div>
+                <div class="images"><img src="west_virginia_museum.jpg" class="image_right"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function restaurant_scroll() {
+            var elmnt = document.getElementById("restaurant");
+            elmnt.scrollIntoView();
+        }
+
+        function lq_scroll() {
+            var elmnt2 = document.getElementById("living_space");
+            elmnt2.scrollIntoView();
+        }
+
+        function landmark_scroll() {
+            var elmnt3 = document.getElementById("landmark");
+            elmnt3.scrollIntoView();
+        }
+
+        function spa_scroll() {
+            var elmnt4 = document.getElementById("spa");
+            elmnt4.scrollIntoView();
+        }
+
+        function museum_scroll() {
+            var elmnt5 = document.getElementById("museum");
+            elmnt5.scrollIntoView();
+        }
+    </script>
+</body>
+
+</html>
