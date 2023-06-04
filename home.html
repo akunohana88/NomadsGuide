@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            background-color: #ffd3b6;
+            background-position: center;
+            background-image: url("guide.png");
+            background-size: 1250px;
+            background-repeat: no-repeat;
+            background-position: top 365px center;
+        }
+
+        nav{
+          background-image: url("logo.png");
+          background-size: 150px;
+          background-repeat: no-repeat;
+          background-position: right 10px center;
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+            height: auto;
+        }
+
+        .slideshow-container {
+            max-width: device-width;
+            position: relative;
+            margin: auto;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .text {
+            color: #75b1b2;
+            font-size: 150px;
+            font-family: 'Cinzel', serif;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #0966D3;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #75b1b2;
+        }
+
+        .fade-carousel {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1s;
+            animation-name: fade;
+            animation-duration: 1s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .img-holder {
+            width: 100%;
+            height: 600px;
+            background-position: center;
+            background-size: cover;
+        }
+        .footer {
+            position: absolute;
+            left: 0;
+            bottom: -250px;
+            width: 100%;
+            height: 750px;
+            background-color: #ffd3b6;
+            color: black;
+            text-align: center;
+        }
+
+        .card {
+            position: absolute;
+            top: -50px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 210px;
+            margin: auto;
+            text-align: center;
+            font-size: 16px;
+            font-family: Cinzel;
+        }
+
+        .title {
+            color: grey;
+            font-size: 14px;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        button:hover,
+        a:hover {
+            opacity: 0.7;
+        }
+
+        .description {
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 12px;
+        }
+
+        .profile_name {
+            font-size: 18px;
+        }
+
+        #card1 {
+            position: absolute;
+            left: 50px;
+        }
+
+        #card2 {
+            position: absolute;
+            left: 350px;
+        }
+
+        #card3 {
+            position: absolute;
+            left: 650px;
+        }
+
+        #card4 {
+            position: absolute;
+            left: 950px;
+        }
+        .test_text{
+          position: absolute;
+          top: 600px;
+        }
+        .footer_group{
+          position: absolute;
+          width: 100%;
+          top: 1100px;
+        }
+        .footer_text{
+          text-align: justify;
+          position: absolute;
+          bottom: 50px;
+          left: 300px;
+          width: 600px;
+        }
+        .footer_title{
+          position: absolute;
+          top: 450px;
+          left: 475px;
+        }
+        .PARALLAX {
+            background-image: url("https://resi.ze-robot.com/dl/gr/green-valley-windows-10-lockscreen-removed-people-don't-know-original-photographer-to-give-credit-1600%C3%97900.jpg");
+            min-height: 1000px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+
+        h100 {
+          border-left-style: none;
+          border-right-style: none;
+          border-top: solid;
+          border-bottom: solid;
+          border-width: 5px;
+          border-color: #fdc9a4;
+          font-size: 75px;
+          text-align: center;
+          color: #455066;
+          font-family: 'Cinzel', serif;
+        }
+
+        .phrase{
+          color:#455066;
+          font-size: 25px;
+          text-align:center;
+          font-family: 'Cinzel', serif;
+        }
+
+        .headshot{
+          height: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Nomad's Guide</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="alaska.html">Alaska</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="arizona.html">Arizona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="new_mexico.html">New Mexico</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="virginia.html">Virginia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="washington.html">Washington</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="more_states_page.html">More States...</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- SLIDESHOW -->
+    <div class="slideshow-container">
+        <div class="mySlides fade-carousel">
+            <div class="img-holder" style="background-image: url('alaska_index.jpg')"></div>
+            <a href="alaska.html">
+                <div class="text">Alaska</div>
+            </a>
+        </div>
+
+        <div class="mySlides fade-carousel">
+            <div class="img-holder" style="background-image: url('arizona_index.jpg')"></div>
+            <a href="arizona.html">
+                <div class="text">Arizona</div>
+            </a>
+        </div>
+
+        <div class="mySlides fade-carousel">
+            <div class="img-holder" style="background-image: url('new_mexico_index.jpg')"></div>
+            <a href="new_mexico.html">
+                <div class="text">New Mexico</div>
+            </a>
+        </div>
+
+        <div class="mySlides fade-carousel">
+            <div class="img-holder" style="background-image: url('virginia_index.jpg')"></div>
+            <a href="virginia.html">
+                <div class="text">Virginia</div>
+            </a>
+        </div>
+
+        <div class="mySlides fade-carousel">
+            <div class="img-holder" style="background-image: url('washington_index.jpg')"></div>
+            <a href="washington.html">
+                <div class="text">Washington</div>
+            </a>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    <!-- <center><i class="phrase">If not now, when?<i></center> -->
+
+
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    <!-- FOOTER -->
+    <div class="footer_group">
+        <div class="footer">
+        <!-- ABOUT US -->
+        <div class="card" id="card1">
+            <img src="pic_serline.jpg" class="headshot" style="width:100%">
+            <h1 class="profile_name">Serline C.</h1>
+            <!-- <p class="title">CEO & Founder, River Tinder</p> -->
+            <p>Rising Senior at B.T.H.S.</p>
+            <p class="description">I enjoy reading, swimming and binge-watching Netflix TV series. A fun fact about me is that I have double-jointed fingers.</p>
+            <p>
+                <a href="contact_serline.html"><button>Contact</button></a>
+            </p>
+        </div>
+
+        <div class="card" id="card2">
+            <img src="pic_hana.jpg" class="headshot" style="width:100%">
+            <h1 class="profile_name">Hana H.</h1>
+            <!-- <p class="title">CEO & Founder, River Tinder</p> -->
+            <p>Rising Junior at B.H.S.</p>
+            <p class="description">I enjoy listening to music, reading classic books, eating and sleeping. A fun fact about me is that I travel at least once every year.</p>
+            <p>
+                <a href="contact_hana.html"><button>Contact</button></a>
+            </p>
+        </div>
+
+        <div class="card" id="card3">
+            <img src="pic_sabine.jpg" class="headshot" style="width:100%">
+            <h1 class="profile_name">Sabine S.</h1>
+            <!-- <p class="title">CEO & Founder, River Tinder</p> -->
+            <p>Rising Junior at L.H.S.</p>
+            <p class="description">I like writing fiction, reading novels and watching YouTube. A fun fact about me is that I like to make jewelry in various mediums.</p>
+            <p>
+                <a href="contact_sabine.html"><button>Contact</button></a>
+            </p>
+        </div>
+
+        <div class="card" id="card4">
+            <img src ="pic_alexa.PNG" class="headshot" style="width:100%">
+            <h1 class="profile_name">Alexa R.</h1>
+            <!-- <p class="title">CEO & Founder, River Tinder</p> -->
+            <p>Rising Senior at U.H.S.C.J.</p>
+            <p class="description">I enjoy teaching and coach for kickboxing. A fun fact about me is I had the chance to perform on Broadway and watch Hamilton.</p>
+            <p>
+                <a href="contact_alexa.html"><button>Contact</button></a>
+            </p>
+        </div>
+        <div class="about">
+            <h4 class= "footer_title"> About Nomad's Guide </h4>
+            <p class= "footer_text"> Are you looking to travel the US, but not sure where to start? Visiting a state and you don't know where you want to go? Are you just generally curious about what things the US has to offer? If you answered yes to any of these questions, have no fear! This site is for you. Simply look up any state that you want to visit to see our recommendations for the top five things you should do before you leave. Now's the time to endulge your dreams of traveling across the US; after all: if not now, when?</p>
+        </div>
+    </div>
+
+    <!-- PARALLAX -->
+    <div class="PARALLAX"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
