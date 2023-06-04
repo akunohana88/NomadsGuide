@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style media="screen">
+      nav{
+        background-image: url("logo.png");
+        background-size: 150px;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+      }
+        .container {
+            position: absolute;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+
+        #restaurant {
+            left: 100px;
+            top: 100px;
+        }
+
+        .image_right {
+            right: 300px;
+            top: 20px;
+            height: 50%;
+            width: 50%;
+        }
+
+        .paragraph {
+            width: 500px;
+        }
+
+        .image_left {
+            left: 25px;
+            top: 20px;
+            height: 50%;
+            width: 50%;
+        }
+
+        #living_space {
+            left: 15px;
+            top: 500px;
+        }
+        /* .text{
+        position: absolute;
+        left: 300px;
+      } */
+
+        #landmark {
+            left: 100px;
+            top: 900px;
+        }
+
+        #zoo {
+            left: 15px;
+            top: 1300px;
+        }
+
+        #museum {
+            left: 100px;
+            top: 1700px;
+        }
+
+        .state_name {
+            padding-top: 20px;
+            padding-right: 60px;
+            text-align: right;
+            text-decoration: underline;
+            top: 50px;
+            font-size: 48px;
+        }
+
+        .page {
+            position: relative;
+            top: -50px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        #locations {
+            background-color: #255;
+            border-color: #255;
+        }
+
+        .writing_left {
+            text-align: left;
+            float: left;
+        }
+
+        .writing_right {
+            text-align: right;
+            float: right;
+        }
+
+        .picture_right {
+            text-align: right;
+            float: left;
+        }
+
+        .picture_left {
+            text-align: left;
+            float: right;
+        }
+
+        .images {
+            width: 1025px;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Nomad's Guide</a>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="alaska.html">Alaska</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="arizona.html">Arizona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="new_mexico.html">New Mexico</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="virginia.html">Virginia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="washington.html">Washington</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="more_states_page.html">More States...</a>
+            </li>
+          </ul>
+    </nav>
+    <!-- SIDENAV BAR -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" onclick="restaurant_scroll()">Restaurant</a>
+        <a href="javascript:void(0)" onclick="lq_scroll()">Living Quarters</a>
+        <a href="javascript:void(0)" onclick="landmark_scroll()">Landmark</a>
+        <a href="javascript:void(0)" onclick="zoo_scroll()">Zoo</a>
+        <a href="javascript:void(0)" onclick="museum_scroll()">Museum</a>
+    </div>
+    <div id="main">
+        <button type="button" onclick="openNav()" id="locations" class="btn btn-primary">Locations</button>
+    </div>
+
+    <!-- STATE PAGE -->
+    <h1 class="state_name">Nebraska</h1>
+    <div class="page">
+        <div class="container" id="restaurant">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Restaurant</h1>
+                    <h5>Eat Restaurant</h5>
+                    <h6 class="paragraph">Location:  327 2nd St, Dodge, NE 68633</h6>
+                    <h6 class="paragraph">Contact Info: (402) 693-2292</h6>
+                    <h6 class="paragraph">Website: <a href=https://www.facebook.com/eatindodge/>https://www.facebook.com/eatindodge/</a></h6>
+                    <h6 class="paragraph">About: The staff are friendly and welcoming. They have incredible breakfast and coffee. They have a vegan/vegetarian burger option that is as amazing as a meat burger.</h6>
+                </div>
+                <div class="images"><img src="nebraska_rest.png" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="living_space">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Living Quarters</h1>
+                    <h5>Best Western Nebraska City Inn</h5>
+                    <h6 class="paragraph">Location: 2515 S 11th St, Nebraska City, NE 68410</h6>
+                    <h6 class="paragraph">Contact Info:  (402) 873-7000</h6>
+                    <h6 class="paragraph">Website: <a href= https://www.bestwestern.com/en_US/book/hotel-rooms.28064.html?iata=00171880&ssob=BLBWI0004G&cid=BLBWI0004G:google:gmb:28064>https://www.bestwestern.com/</a> </h6>
+                    <h6 class="paragraph">About: This hotel has numerous luxuries including free WiFi, breakfast and parking. In addittion, they have an indoor pool and hot tub.</h6>
+                </div>
+                <div class="images"><img src="nebraska_hotel.png" class="image_left"></div>
+            </div>
+        </div>
+
+        <div class="container" id="landmark">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Landmark</h1>
+                    <h5>Chimney Rock National Historic Site</h5>
+                    <h6 class="paragraph">Location: 9822 County Rd 75, Bayard, NE 69334</h6>
+                    <h6 class="paragraph">Contact Info: (308) 586-2581</h6>
+                    <h6 class="paragraph">Website: <a href=https://history.nebraska.gov/rock>https://history.nebraska.gov/rock</a></h6>
+                    <h6 class="paragraph">About: The Chimney Rock is maintained and operated by History Nebraska. Museum exhibits provide activity and education about the great migration. There are also books on trail history, educational games for kids and unique craft items.</h6>
+                </div>
+                <div class="images"><img src="nebraska_landmark.jpg" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="zoo">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Zoo</h1>
+                        <h5>Omaha's Henry Doorly Zoo and Aquarium</h5>
+                        <h6 class="paragraph">Location: 3701 S 10th St, Omaha, NE 68107</h6>
+                        <h6 class="paragraph">Contact Info: (402) 733-8400</h6>
+                        <h6 class="paragraph">Website: <a href=http://www.omahazoo.com/>http://www.omahazoo.com/</a></h6>
+                        <h6 class="paragraph">About: It is accredited by the Association of Zoos and Aquariums and a member of the World Association of Zoos and Aquariums. Their dome containing species habitates such as the world's largest inddor rainforest and desert.</h6>
+                </div>
+                <div class="images"><img src="nebraska_zoo.png" class="image_left"></div>
+            </div>
+        </div>
+
+        <div class="container" id="museum">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Museum</h1>
+                    <h5>Nebraska History Museum</h5>
+                    <h6 class="paragraph">Location: 131 Centennial Mall N Lincoln, NE 68508</h6>
+                    <h6 class="paragraph">Contact Info: (402) 471-4754</h6>
+                    <h6 class="paragraph">Website: <a href=https://history.nebraska.gov/museum>https://history.nebraska.gov/museum</a></h6>
+                    <h6 class="paragraph">About: Containing 12 thousands years of history. Many< people and cultures have made Nebraska their home. Go and see their fascinating artifacts and hear their inspiring stories.</h6>
+                </div>
+                <div class="images"><img src="nebraska_museum.png" class="image_right"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function restaurant_scroll() {
+            var elmnt = document.getElementById("restaurant");
+            elmnt.scrollIntoView();
+        }
+
+        function lq_scroll() {
+            var elmnt2 = document.getElementById("living_space");
+            elmnt2.scrollIntoView();
+        }
+
+        function landmark_scroll() {
+            var elmnt3 = document.getElementById("landmark");
+            elmnt3.scrollIntoView();
+        }
+
+        function zoo_scroll() {
+            var elmnt4 = document.getElementById("zoo");
+            elmnt4.scrollIntoView();
+        }
+
+        function museum_scroll() {
+            var elmnt5 = document.getElementById("museum");
+            elmnt5.scrollIntoView();
+        }
+    </script>
+</body>
+
+</html>

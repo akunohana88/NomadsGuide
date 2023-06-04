@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style media="screen">
+      nav{
+        background-image: url("logo.png");
+        background-size: 150px;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+      }
+        .container {
+            position: absolute;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+
+        #restaurant {
+            left: 100px;
+            top: 100px;
+        }
+
+        .image_right {
+            right: 300px;
+            top: 20px;
+            height: 50%;
+            width: 50%;
+        }
+
+        .paragraph {
+            width: 500px;
+        }
+
+        .image_left {
+            left: 25px;
+            top: 20px;
+            height: 50%;
+            width: 50%;
+        }
+
+        #living_space {
+            left: 15px;
+            top: 500px;
+        }
+        /* .text{
+        position: absolute;
+        left: 300px;
+      } */
+
+        #landmark {
+            left: 100px;
+            top: 900px;
+        }
+
+        #spa {
+            left: 15px;
+            top: 1300px;
+        }
+
+        #museum {
+            left: 100px;
+            top: 1700px;
+        }
+
+        .state_name {
+            padding-top: 20px;
+            padding-right: 60px;
+            text-align: right;
+            text-decoration: underline;
+            top: 50px;
+            font-size: 48px;
+        }
+
+        .page {
+            position: relative;
+            top: -50px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        #locations {
+            background-color: #255;
+            border-color: #255;
+        }
+
+        .writing_left {
+            text-align: left;
+            float: left;
+        }
+
+        .writing_right {
+            text-align: right;
+            float: right;
+        }
+
+        .picture_right {
+            text-align: right;
+            float: left;
+        }
+
+        .picture_left {
+            text-align: left;
+            float: right;
+        }
+
+        .images {
+            width: 1025px;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Nomad's Guide</a>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="alaska.html">Alaska</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="arizona.html">Arizona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="new_mexico.html">New Mexico</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="virginia.html">Virginia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="washington.html">Washington</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="more_states_page.html">More States...</a>
+            </li>
+          </ul>
+    </nav>
+    <!-- SIDENAV BAR -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" onclick="restaurant_scroll()">Restaurant</a>
+        <a href="javascript:void(0)" onclick="lq_scroll()">Living Quarters</a>
+        <a href="javascript:void(0)" onclick="landmark_scroll()">Landmark</a>
+        <a href="javascript:void(0)" onclick="spa_scroll()">Spa</a>
+        <a href="javascript:void(0)" onclick="museum_scroll()">Museum</a>
+    </div>
+    <div id="main">
+        <button type="button" onclick="openNav()" id="locations" class="btn btn-primary">Locations</button>
+    </div>
+
+    <!-- STATE PAGE -->
+    <h1 class="state_name">Michigan</h1>
+    <div class="page">
+        <div class="container" id="restaurant">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Restaurant</h1>
+                    <h5>Shins Korean Restaurant</h5>
+                    <h6 class="paragraph">Location: 1620 S Mission St, Mt Pleasant, MI 48858</h6>
+                    <h6 class="paragraph">Contact Info: (989) 317-0736</h6>
+                    <h6 class="paragraph">Website: N/A</h6>
+                    <h6 class="paragraph">About: If you are looking for a quick place to stop and grab a bite to eat then this is the place to go. Shins sells authentic Korean food that will be sure to satisfy your cravings. Locals love it and so will you!</h6>
+                </div>
+                <div class="images"><img src="michigan_rest.png" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="living_space">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Living Quarters</h1>
+                    <h5>Staybridge Suites Dearborn MI</h5>
+                    <h6 class="paragraph">Location: 24105 Michigan Ave, Dearborn, MI 48124</h6>
+                    <h6 class="paragraph">Contact Info: (313) 565-1500</h6>
+                    <h6 class="paragraph">Website: <a href= https://www.tripadvisor.com/Hotel_Review-g42130-d8678378-Reviews-Staybridge_Suites_Dearborn-Dearborn_Michigan.html>https://www.tripadvisor.com/</a> </h6>
+                    <h6 class="paragraph">About: This chic, modern style hotel is the perfect place to stay on your trip. With features such as indoor pools, laundry facilities, and BBQ grills you will surely not regret your visit. Also, pets are allowed too if you pay a small fee. </h6>
+                </div>
+                <div class="images"><img src="michigan_hotel.png" class="image_left"></div>
+            </div>
+        </div>
+
+        <div class="container" id="landmark">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Landmark</h1>
+                    <h5>Detroit Institute of Arts</h5>
+                    <h6 class="paragraph">Location: 5200 Woodward Ave, Detroit, MI 48202</h6>
+                    <h6 class="paragraph">Contact Info: (313) 833-7900</h6>
+                    <h6 class="paragraph">Website: <a href= https://www.dia.org/>https://www.dia.org/</a></h6>
+                    <h6 class="paragraph">About: Located in downtown Detroit, this fine arts institute displays one of the most significant art collections in the United States. The food service is top notch and there are over a hundred galleries with American and global art on display.</h6>
+                </div>
+                <div class="images"><img src="michigan_landmark.png" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="spa">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Spa</h1>
+                        <h5>Om Day Spa</h5>
+                        <h6 class="paragraph">Location: 22070 Michigan Ave, Dearborn, MI 48124</h6>
+                        <h6 class="paragraph">Contact Info: (313) 565-9686</h6>
+                        <h6 class="paragraph">Website: <a href=https://www.omdayspa.com/>https://www.omdayspa.com/</a></h6>
+                        <h6 class="paragraph">About: In the heart of Downtown West Dearborn, Om Day Spa offers a variety of services. If you want to unwind and relax enjoy the tranquility of this highly appraised spa. The clients love this place and the reviews on Yelp are off the charts. </h6>
+                </div>
+                <div class="images"><img src="michigan_spa.png" class="image_left"></div>
+            </div>
+        </div>
+
+        <div class="container" id="museum">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Museum</h1>
+                    <h5>University of Michigan Museum of Art</h5>
+                    <h6 class="paragraph">Location: 525 S State St, Ann Arbor, MI 48109</h6>
+                    <h6 class="paragraph">Contact Info:  (734) 764-0395</h6>
+                    <h6 class="paragraph">Website: <a href= https://www.umma.umich.edu/>https://www.umma.umich.edu/</a></h6>
+                    <h6 class="paragraph">About: The University of Michigan Museum of Art is a museum with collections of amazing pieces of art that displays exhibitions from the current, upcoming, and the past.</h6>
+                </div>
+                <div class="images"><img src="michigan_museum.png" class="image_right"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function restaurant_scroll() {
+            var elmnt = document.getElementById("restaurant");
+            elmnt.scrollIntoView();
+        }
+
+        function lq_scroll() {
+            var elmnt2 = document.getElementById("living_space");
+            elmnt2.scrollIntoView();
+        }
+
+        function landmark_scroll() {
+            var elmnt3 = document.getElementById("landmark");
+            elmnt3.scrollIntoView();
+        }
+
+        function spa_scroll() {
+            var elmnt4 = document.getElementById("spa");
+            elmnt4.scrollIntoView();
+        }
+
+        function museum_scroll() {
+            var elmnt5 = document.getElementById("museum");
+            elmnt5.scrollIntoView();
+        }
+    </script>
+</body>
+
+</html>

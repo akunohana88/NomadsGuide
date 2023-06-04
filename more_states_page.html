@@ -1,0 +1,845 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style media="screen">
+      body {
+        background-color: #ffd3b6;
+      }
+
+      nav{
+        background-image: url("logo.png");
+        background-size: 150px;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+      }
+
+      #state6{
+        position: absolute;
+        left: 40px;
+      }
+
+      #state7{
+        position: absolute;
+        left: 340px;
+      }
+
+      #state8{
+        position: absolute;
+        left: 640px;
+      }
+
+      #state9{
+        position: absolute;
+        left: 940px;
+      }
+
+      #row_1{
+        padding-top: 100px;
+      }
+
+      #row_2{
+        position: absolute;
+        top: 700px;
+      }
+
+      #row_3{
+        position: absolute;
+        top: 1200px;
+      }
+
+      #row_4{
+        position: absolute;
+        top: 1700px;
+      }
+
+      #row_5{
+        position: absolute;
+        top: 2200px;
+      }
+
+      #row_6{
+        position: absolute;
+        top: 2700px;
+      }
+
+      #row_7{
+        position: absolute;
+        top: 3200px;
+      }
+
+      #row_8{
+        position: absolute;
+        top: 3700px;
+      }
+
+      #row_9{
+        position: absolute;
+        top: 4200px;
+      }
+
+      #row_10{
+        position: absolute;
+        top: 4700px;
+      }
+
+      #row_11{
+        position: absolute;
+        top: 5200px;
+      }
+
+      #row_12{
+        position: absolute;
+        top: 5700px;
+      }
+      .last_row{
+        position: absolute;
+        padding-bottom: 100px;
+        top: 6200px;
+        left: 340px;
+      }
+      #state11{
+        position: absolute;
+        left: 300px;
+      }
+      .title_of_more_states{
+        position: absolute;
+        left: 40px;
+        top: 75px;
+      }
+      .card-body{
+        height: 275px;
+      }
+      .card-img-top{
+        height: 175px;
+      }
+      .btn{
+        position: absolute;
+        bottom: 20px;
+      }
+      /* SIDENAV */
+      .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          padding-top: 60px;
+          transition: 0.5s;
+      }
+
+      .sidenav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+      }
+
+      .sidenav a:hover {
+          color: #f1f1f1;
+      }
+
+      .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+      }
+
+      #main {
+          transition: margin-left .5s;
+          padding: 20px;
+      }
+
+      @media screen and (max-height: 450px) {
+          .sidenav {
+              padding-top: 15px;
+          }
+          .sidenav a {
+              font-size: 18px;
+          }
+      }
+
+      #locations {
+          background-color: #255;
+          border-color: #255;
+      }
+      .nav_btn{
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        color: #fff;
+        position: absolute;
+        top: 150px;
+        left: 1095px;
+      }
+      .nav_btn:not(:disabled):not(.disabled) {
+        cursor: pointer;
+      }
+      #myBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: #255; /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        border-radius: 10px; /* Rounded corners */
+        font-size: 18px; /* Increase font size */
+    }
+
+    #myBtn:hover {
+        background-color: #555; /* Add a dark-grey background on hover */
+    }
+
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Nomad's Guide</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="alaska.html">Alaska</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="arizona.html">Arizona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="new_mexico.html">New Mexico</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="virginia.html">Virginia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="washington.html">Washington</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="more_states_page.html">More States...</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- SIDENAV -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" onclick="a_scroll()">A</a>
+        <a href="javascript:void(0)" onclick="cd_scroll()">C-D</a>
+        <a href="javascript:void(0)" onclick="fh_scroll()">F-H</a>
+        <a href="javascript:void(0)" onclick="i_scroll()">I</a>
+        <a href="javascript:void(0)" onclick="kl_scroll()">K-L</a>
+        <a href="javascript:void(0)" onclick="m_scroll()">M</a>
+        <a href="javascript:void(0)" onclick="n_scroll()">N</a>
+        <a href="javascript:void(0)" onclick="or_scroll()">O-R</a>
+        <a href="javascript:void(0)" onclick="su_scroll()">S-U</a>
+        <a href="javascript:void(0)" onclick="vw_scroll()">V-W</a>
+    </div>
+    <div id="main">
+        <button type="button" onclick="openNav()" id="locations" class="nav_btn">States by Letter</button>
+    </div>
+    <i><h1 class="title_of_more_states">More States</h1></i>
+    <!-- ROW1 -->
+    <div class="more_states_cards" id="row_1">
+      <div class="card" style="width: 18rem;" id="state6">
+        <img class="card-img-top" src="flag_alabama.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Alabama</h5>
+          <p class="card-text">Alabama introduced the Mardi Gras to the western world.</p>
+          <a href="alabama.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state7">
+        <img class="card-img-top" src="flag_alaska.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Alaska</h5>
+          <p class="card-text">There are more than 3 thousand and 3 million lakes in Alaska.</p>
+          <a href="alaska.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state8">
+        <img class="card-img-top" src="flag_arizona.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Arizona</h5>
+          <p class="card-text">Arizona leads the nation in copper production.</p>
+          <a href="arizona.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state9">
+        <img class="card-img-top" src="flag_arkansas.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Arkansas</h5>
+          <p class="card-text">Arkansas holds an annual World's Championship Duck Calling Contest in Stuttgart.</p>
+          <a href="arkansas.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW2 -->
+    <div class="more_states_cards" id="row_2">
+      <div class="card" style="width: 18rem;" id="state6">
+        <img class="card-img-top" src="flag_california.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">California</h5>
+          <p class="card-text">More turkeys are raised in California than any other state in the U.S.</p>
+          <a href="california.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state7">
+        <img class="card-img-top" src="flag_colorado.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Colorado</h5>
+          <p class="card-text">The U.S federal government owns moe than one third of the land in Colorado.</p>
+          <a href="colorado.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state8">
+        <img class="card-img-top" src="flag_connecticut.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Connecticut</h5>
+          <p class="card-text">Connecticut is home to the oldest U.S. newspaper: The Hartford Courant.</p>
+          <a href="connecticut.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state9">
+        <img class="card-img-top" src="flag_delaware.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Delaware</h5>
+          <p class="card-text">Delaware is the first state to ratify the United States constitution.</p>
+          <a href="delaware.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW 3 -->
+    <div class="more_states_cards" id="row_3">
+      <div class="card" style="width: 18rem;" id="state6">
+        <img class="card-img-top" src="flag_florida.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Florida</h5>
+          <p class="card-text">Orlando, Florida attracts more visitors than any other amusement park in the U.S.</p>
+          <a href="florida.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state7">
+        <img class="card-img-top" src="flag_georgia.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Georgia</h5>
+          <p class="card-text">Historic Saint Marys Georgia is the second oldest city in the nation.</p>
+          <a href="georgia.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state8">
+        <img class="card-img-top" src="flag_hawaii.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Hawaii</h5>
+          <p class="card-text">Hawaii is the only state that grows coffee.</p>
+          <a href="hawaii.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state9">
+        <img class="card-img-top" src="flag_idaho.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Idaho</h5>
+          <p class="card-text">Idaho law forbids a citizen to give another citizen a box of candy that weighs more than 50 pounds.</p>
+          <a href="idaho.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW4 -->
+    <div class="more_states_cards" id="row_4">
+      <div class="card" style="width: 18rem;" id="state6">
+        <img class="card-img-top" src="flag_illinois.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Illinois</h5>
+          <p class="card-text">The first aquarium opened in Chicago, Illinois.</p>
+          <a href="illinois.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state7">
+        <img class="card-img-top" src="flag_indiana.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Indiana</h5>
+          <p class="card-text">Abraham Lincoln moved to Indiana when he was seven years old.</p>
+          <a href="indiana.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state8">
+        <img class="card-img-top" src="flag_iowa.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Iowa</h5>
+          <p class="card-text">Strawberry Point, Iowa is home to the world's largest strawberry.</p>
+          <a href="iowa.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state9">
+        <img class="card-img-top" src="flag_kansas.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Kansas</h5>
+          <p class="card-text">Kansas won an award for the most beautiful license plate issued in 1981.</p>
+          <a href="kansas.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW5 -->
+    <div class="more_states_cards" id="row_5">
+      <div class="card" style="width: 18rem;" id="state6">
+        <img class="card-img-top" src="flag_kentucky.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Kentucky</h5>
+          <p class="card-text">The song "Happy Birthday To You" was the creation of two Louisville sisters in 1893.</p>
+          <a href="kentucky.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state7">
+        <img class="card-img-top" src="flag_louisiana.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Louisiana</h5>
+          <p class="card-text">Louisiana was named in honor of King Louis XVI.</p>
+          <a href="louisiana.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state8">
+        <img class="card-img-top" src="flag_maine.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Maine</h5>
+          <p class="card-text">Maine is the only state that has one syllable.</p>
+          <a href="maine.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state9">
+        <img class="card-img-top" src="flag_maryland.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Maryland</h5>
+          <p class="card-text">The first dental school in the U.S. opened at the University of Maryland.</p>
+          <a href="maryland.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW6 -->
+    <div class="more_states_cards" id="row_6">
+      <div class="card" style="width: 18rem;" id="state6">
+        <img class="card-img-top" src="flag_massachusetts.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Massachusetts</h5>
+          <p class="card-text">Boston, Massachusetts built the first subway system in the U.S.</p>
+          <a href="massachusetts.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state7">
+        <img class="card-img-top" src="flag_michigan.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Michigan</h5>
+          <p class="card-text">Detroit, Michigan is known as the car capital of the world.</p>
+          <a href="michigan.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state8">
+        <img class="card-img-top" src="flag_minnesota.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Minnesota</h5>
+          <p class="card-text">Minnesota has 90 thousand miles of shoreline, more than California, Florida and Hawaii combined.</p>
+          <a href="minnesota.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state9">
+        <img class="card-img-top" src="flag_mississippi.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Mississippi</h5>
+          <p class="card-text">Elvis Presley was born in Mississippi.</p>
+          <a href="mississippi.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW7 -->
+    <div class="more_states_cards" id="row_7">
+      <div class="card" style="width: 18rem;" id="state6">
+        <img class="card-img-top" src="flag_missouri.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Missouri</h5>
+          <p class="card-text">Missouri's state animal is a mule.</p>
+          <a href="missouri.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state7">
+        <img class="card-img-top" src="flag_montana.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Montana</h5>
+          <p class="card-text">Montana has the largest migratory elk herd in the nation.</p>
+          <a href="montana.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state8">
+        <img class="card-img-top" src="flag_nebraska.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Nebraska</h5>
+          <p class="card-text">Nebraska was once called "The Great American Desert".</p>
+          <a href="nebraska.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state9">
+        <img class="card-img-top" src="flag_nevada.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Nevada</h5>
+          <p class="card-text">The ichtyhyosaur is Nevada's official state fossil.</p>
+          <a href="nevada.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW8 -->
+    <div class="more_states_cards" id="row_8">
+      <div class="card" style="width: 18rem;" id="state6">
+        <img class="card-img-top" src="flag_new_hampshire.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">New Hampshire</h5>
+          <p class="card-text">The first potato planted in the United States was at Londonderry Common Field, New Hampshire.</p>
+          <a href="new_hampshire.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state7">
+        <img class="card-img-top" src="flag_new_jersey.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">New Jersey</h5>
+          <p class="card-text">New Jersey has the highest urban population in the U.S.</p>
+          <a href="new_jersey.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state8">
+        <img class="card-img-top" src="flag_new_mexico.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">New Mexico</h5>
+          <p class="card-text">Santa Fe, New Mexico is the highest capital city in the U.S. at 7 thousand feet above sea level.</p>
+          <a href="new_mexico.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state9">
+        <img class="card-img-top" src="flag_new_york.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">New York</h5>
+          <p class="card-text">The first American chess tournament was held in New York.</p>
+          <a href="new_york.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW9 -->
+    <div class="more_states_cards" id="row_9">
+      <div class="card" style="width: 18rem;" id="state6">
+        <img class="card-img-top" src="flag_north_carolina.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">North Carolina</h5>
+          <p class="card-text">The University of North Carolina Chapel Hill is the oldest State University in the U.S.</p>
+          <a href="north_carolina.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state7">
+        <img class="card-img-top" src="flag_north_dakota.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">North Dakota</h5>
+          <p class="card-text">Milk is North Dakota's official state beverage.</p>
+          <a href="north_dakota.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state8">
+        <img class="card-img-top" src="flag_ohio.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Ohio</h5>
+          <p class="card-text">"Hang On Sloopy" is the official state rock song.</p>
+          <a href="ohio.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state9">
+        <img class="card-img-top" src="flag_oklahoma.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Oklahoma</h5>
+          <p class="card-text">The National Cowboy Hall of Fame is located in Oklahoma City.</p>
+          <a href="oklahoma.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW 10 -->
+    <div class="more_states_cards" id="row_10">
+      <div class="card" style="width: 18rem;" id="state6">
+        <img class="card-img-top" src="flag_oregon.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Oregon</h5>
+          <p class="card-text">Oregon has more ghost towns than any other state.</p>
+          <a href="oregon.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state7">
+        <img class="card-img-top" src="flag_pennsylvania.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Pennsylvania</h5>
+          <p class="card-text">The first baseball stadium was built in Pittsburgh, Pennsylvania.</p>
+          <a href="pennsylvania.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state8">
+        <img class="card-img-top" src="flag_rhode_island.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Rhode Island</h5>
+          <p class="card-text">Rhode Island never ratified the 18th amendment prohibition.</p>
+          <a href="rhode_island.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state9">
+        <img class="card-img-top" src="flag_south_carolina.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">South Carolina</h5>
+          <p class="card-text">The state dance of South Carolina is the Shag.</p>
+          <a href="south_carolina.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW11 -->
+    <div class="more_states_cards" id="row_11">
+      <div class="card" style="width: 18rem;" id="state6">
+        <img class="card-img-top" src="flag_south_dakota.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">South Dakota</h5>
+          <p class="card-text">Bowdle is known for the tallest water tower in South Dakota.</p>
+          <a href="south_dakota.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state7">
+        <img class="card-img-top" src="flag_tennessee.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Tennessee</h5>
+          <p class="card-text">Tennessee won its nickname as The Volunteer State during the War of 1812 when volunteer soldiers from Tennessee displayed marked valor in the Battle of New Orleans.</p>
+          <a href="tennessee.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state8">
+        <img class="card-img-top" src="flag_texas.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Texas</h5>
+          <p class="card-text">Texas is the only state to enter the United States by treaty instead of territorial annexation.</p>
+          <a href="texas.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state9">
+        <img class="card-img-top" src="flag_utah.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Utah</h5>
+          <p class="card-text">Levan, is "navel" spelled backwards. It is so named because it is in the middle of Utah.</p>
+          <a href="utah.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW12 -->
+    <div class="more_states_cards" id="row_12">
+      <div class="card" style="width: 18rem;" id="state6">
+        <img class="card-img-top" src="flag_vermont.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Vermont</h5>
+          <p class="card-text">Montpelier, Vermont is the only U.S. state capital without a McDonalds.</p>
+          <a href="vermont.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state7">
+        <img class="card-img-top" src="flag_virginia.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Virginia</h5>
+          <p class="card-text">The State nickname is "Old Dominion".</p>
+          <a href="virginia.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state8">
+        <img class="card-img-top" src="flag_washington.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Washington</h5>
+          <p class="card-text">Washington state has more glaciers than the other 47 contiguous states combined.</p>
+          <a href="washington.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="state9">
+        <img class="card-img-top" src="flag_west_virginia.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">West Virginia</h5>
+          <p class="card-text">West Virginia's nickname is the Mountain State and its motto is "Mountaineers Are Always Free."</p>
+          <a href="west_virginia.html" class="btn btn-primary">See This State</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="last_row">
+      <div class="card" style="width: 18rem;" id="state10">
+        <img class="card-img-top" src="flag_wisconsin.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Wisconsin</h5>
+          <p class="card-text">Wisconsin is the dairy capital of the United States.</p>
+          <a href="wisconsin.html" class="btn btn-primary">See This State</a>
+        </div>
+
+        <div class="card" style="width: 18rem;" id="state11">
+          <img class="card-img-top" src="flag_wyoming.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Wyoming</h5>
+            <p class="card-text">Wyoming was the first state to give women the right to vote.</p>
+            <a href="wyoming.html" class="btn btn-primary">See This State</a>
+          </div>
+    </div>
+      <!-- SCROLL TO TOP -->
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function a_scroll() {
+            var elmnt = document.getElementById("row_1");
+            elmnt.scrollIntoView();
+        }
+
+        function cd_scroll() {
+            var elmnt2 = document.getElementById("row_2");
+            elmnt2.scrollIntoView();
+        }
+
+        function fh_scroll() {
+            var elmnt3 = document.getElementById("row_3");
+            elmnt3.scrollIntoView();
+        }
+
+        function i_scroll() {
+            var elmnt4 = document.getElementById("row_3");
+            elmnt4.scrollIntoView();
+        }
+
+        function kl_scroll() {
+            var elmnt5 = document.getElementById("row_4");
+            elmnt5.scrollIntoView();
+        }
+        function m_scroll() {
+            var elmnt6 = document.getElementById("row_5");
+            elmnt6.scrollIntoView();
+        }
+        function n_scroll() {
+            var elmnt7 = document.getElementById("row_7");
+            elmnt7.scrollIntoView();
+        }
+        function or_scroll() {
+            var elmnt8 = document.getElementById("row_9");
+            elmnt8.scrollIntoView();
+        }
+        function su_scroll() {
+            var elmnt9 = document.getElementById("row_10");
+            elmnt9.scrollIntoView();
+        }
+        function vw_scroll() {
+            var elmnt10 = document.getElementById("row_12");
+            elmnt10.scrollIntoView();
+        }
+        // SCROLL TO TOP STUFF
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+  </body>
+</html>
