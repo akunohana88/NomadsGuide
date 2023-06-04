@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style media="screen">
+      nav{
+        background-image: url("logo.png");
+        background-size: 150px;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+      }
+        .container {
+            position: absolute;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+        #restaurant {
+            left: 100px;
+            top: 100px;
+        }
+
+        .image_right {
+            right: 300px;
+            top: 20px;
+            height: 50%;
+            width: 50%;
+        }
+
+        .paragraph {
+            width: 500px;
+        }
+
+        .image_left {
+            left: 25px;
+            top: 20px;
+            height: 50%;
+            width: 50%;
+        }
+        #living_space {
+            left: 15px;
+            top: 500px;
+        }
+        /* .text{
+        position: absolute;
+        left: 300px;
+      } */
+
+        #park {
+            left: 100px;
+            top: 900px;
+        }
+        #theatre {
+            left: 15px;
+            top: 1300px;
+
+        }
+
+        #museum {
+            left: 100px;
+            top: 1700px;
+        }
+        .state_name {
+            padding-top: 20px;
+            padding-right: 60px;
+            text-align: right;
+            text-decoration: underline;
+            top: 50px;
+            font-size: 48px;
+        }
+
+        .page {
+            position: relative;
+            top: -50px;
+        }
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+        #locations {
+            background-color: #255;
+            border-color: #255;
+        }
+
+        .writing_left {
+            text-align: left;
+            float: left;
+        }
+
+        .writing_right {
+            text-align: right;
+            float: right;
+        }
+
+        .picture_right {
+            text-align: right;
+            float: left;
+        }
+        .picture_left {
+            text-align: left;
+            float: right;
+        }
+
+        .images {
+            width: 1025px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Nomad's Guide</a>
+
+        <ul class="nav">
+
+            <li class="nav-item">
+                <a class="nav-link" href="alaska.html">Alaska</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="arizona.html">Arizona</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="new_mexico.html">New Mexico</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="virginia.html">Virginia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="washington.html">Washington</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="more_states_page.html">More States...</a>
+            </li>
+          </ul>
+    </nav>
+    <!-- SIDENAV BAR -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" onclick="restaurant_scroll()">Restaurant</a>
+        <a href="javascript:void(0)" onclick="lq_scroll()">Living Quarters</a>
+        <a href="javascript:void(0)" onclick="park_scroll()">Park</a>
+        <a href="javascript:void(0)" onclick="theatre_scroll()">Theatre</a>
+        <a href="javascript:void(0)" onclick="museum_scroll()">Museum</a>
+    </div>
+    <div id="main">
+        <button type="button" onclick="openNav()" id="locations" class="btn btn-primary">Locations</button>
+    </div>
+    <!-- STATE PAGE -->
+    <h1 class="state_name">Delaware</h1>
+    <div class="page">
+        <div class="container" id="restaurant">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Restaurant</h1>
+                    <h5>La Fia Bistro</h5>
+                    <h6 class="paragraph">Location: 421 N Market St, Wilmington, DE 19801</h6>
+                    <h6 class="paragraph">Contact Info:  (302) 543-5574 </h6>
+                    <h6 class="paragraph">Website: <a href=http://www.lafiawilmington.com>http://www.lafiawilmington.com </a></h6>
+                    <h6 class="paragraph">About: La Fia is a bistro located on historic Market Street in Wilmington, Delaware. Owner Chef Bryan Sikora prepares dishes starring local and sustainable ingredients. The menu allows customers to enjoy a light meal of small plates and courses. </h6>
+                </div>
+                <div class="images"><img src="delaware_rest.png" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="living_space">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Living Quarters</h1>
+                    <h5>Sheraton Suites Wilmington Downtown</h5>
+                    <h6 class="paragraph">Location: 422 Delaware Ave, Wilmington, DE 19801</h6>
+                    <h6 class="paragraph">Contact Info: (302) 654-8300</h6>
+                    <h6 class="paragraph">Website: <a href= https://www.marriott.com/hotels/travel/ilgsi-sheraton-suites-wilmington-downtown?program=spg>https://www.marriott.com/hotels/</a> </h6>
+                    <h6 class="paragraph">About: This hotel has numerous amenities, including an indoor pool, fitness center and free WiFi. The hotel has easy access to cultural attraction, business centers and other surrounding areas. Lastly, the hotel is pet friendly. </h6>
+                </div>
+                <div class="images"><img src="delaware_hotel.png" class="image_left"></div>
+            </div>
+        </div>
+        <div class="container" id="park">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Park</h1>
+                    <h5>Funland</h5>
+                    <h6 class="paragraph">Location:  6 Delaware Ave, Rehoboth Beach, DE 19971</h6>
+                    <h6 class="paragraph">Contact Info: (302) 227-1921</h6>
+                    <h6 class="paragraph">Website: <a href=http://www.funlandrehoboth.com>http://www.funlandrehoboth.com</a></h6>
+                    <h6 class="paragraph">About: Small boardwalk amusement park & arcade with many children's attractions as well as thrill rides.</h6>
+                </div>
+                <div class="images"><img src="delaware_park.png" class="image_right"></div>
+            </div>
+        </div>
+
+        <div class="container" id="theatre">
+            <!-- <div class="text"> -->
+            <div class="picture_left">
+                <div class="writing_right">
+                    <h1>Theatre</h1>
+                        <h5>Clear Space Theatre</h5>
+                        <h6 class="paragraph">Location: 20 Baltimore Ave, Rehoboth Beach, DE 19971-2104</h6>
+                        <h6 class="paragraph">Contact Info: (302) 227-2270</h6>
+                        <h6 class="paragraph">Website: <a href=http://www.clearspacetheatre.org/>http://www.clearspacetheatre.org/</a></h6>
+                        <h6 class="paragraph">About: Home to Clear Space Theatre Company, Sussex County's only year-round professional theatre company. Dedicated to producing and presenting artistic endeavors of integrity and risk.</h6>
+                </div>
+                <div class="images"><img src="delaware_theatre.png" class="image_left"></div>
+            </div>
+        </div>
+        <div class="container" id="museum">
+            <div class="picture_right">
+                <div class="writing_left">
+                    <h1>Museum</h1>
+                    <h5>Hagley Museum and Library</h5>
+                    <h6 class="paragraph">Location: 200 Hagley Creek Rd, Wilmington, DE 19807</h6>
+                    <h6 class="paragraph">Contact Info: (302) 658-2400</h6>
+                    <h6 class="paragraph">Website: <a href= https://www.hagley.org> https://www.hagley.org</a></h6>
+                    <h6 class="paragraph">About: Hagley is the former industrial site of the original black powder works. Today. it is 235 acres of wooded hills alongside the rushing Brandywine River. This site is a National Historic Landmark, National Recreation Trail, and a Historic Engineering Landmark.</h6>
+                </div>
+                <div class="images"><img src="delaware_museum.png" class="image_right"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function restaurant_scroll() {
+            var elmnt = document.getElementById("restaurant");
+            elmnt.scrollIntoView();
+        }
+        function lq_scroll() {
+            var elmnt2 = document.getElementById("living_space");
+            elmnt2.scrollIntoView();
+        }
+        function park_scroll() {
+            var elmnt3 = document.getElementById("park");
+            elmnt3.scrollIntoView();
+        }
+        function theatre_scroll() {
+            var elmnt4 = document.getElementById("theatre");
+            elmnt4.scrollIntoView();
+        }
+
+        function museum_scroll() {
+            var elmnt5 = document.getElementById("museum");
+            elmnt5.scrollIntoView();
+        }
+    </script>
+</body>
+
+</html>
